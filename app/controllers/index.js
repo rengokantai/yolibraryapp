@@ -5,9 +5,7 @@ export default Ember.Controller.extend({
 
 
   emailAddress: '',
-        isDisabled: Ember.computed('emailAddress', function() {
-    return this.get('emailAddress') === '';
-  }),
+        isDisabled: Ember.computed.empty('emailAddress'),
 
   actualEmailAddress: Ember.computed('emailAddress', function() {
     console.log('actualEmailAddress function is called: ', this.get('emailAddress'));
